@@ -21,6 +21,12 @@ If there are more than 3 posts in any given post type then a button will appear 
 
 This opens a page in the backend where you can see all the results and sort by post type, id an date.
 
+![Screenshot of the small results](https://github.com/westcoastdigital/WP-Admin-Advanced-Search/blob/main/assets/image/screenshot-small-results.png)
+
+![Screenshot of the large results](https://github.com/westcoastdigital/WP-Admin-Advanced-Search/blob/main/assets/image/screenshot-large-results.png)
+
+![Screenshot of the view all results](https://github.com/westcoastdigital/WP-Admin-Advanced-Search/blob/main/assets/image/screenshot-view-all.png)
+
 ## Settings
 
 Whilst this plugin works out of the box we do have a few settings for you.
@@ -39,11 +45,15 @@ All your created fields will show up in here, within their respective field grou
 
 Select the ones you want to be used in the search query
 
+![Screenshot of the ACF Settings](https://github.com/westcoastdigital/WP-Admin-Advanced-Search/blob/main/assets/image/screenshot-acf-settings.png)
+
 ### Post Types
 
 All the available post types, including core ones from WordPress, are included here.
 
 Select the ones you want to be used in the search query
+
+![Screenshot of the Post Types Settings](https://github.com/westcoastdigital/WP-Admin-Advanced-Search/blob/main/assets/image/screenshot-post-type-settings.png)
 
 ### Design Settings
 
@@ -52,6 +62,8 @@ There are 3 settings in here
 * Choose where you want the search field to show up, top admin bar or in the side menu - Default is Admin Menu
 * Choose the amount of posts per post type you want to show in the search field dropdown results, this does not affect the View All page - Default is 3 per post type.
 * Choose your sort order. You can sort by the ID, Title or Date and then whether you want it to be ascending or descending order - Default is by Date in Descending order so newest to oldest
+
+![Screenshot of the Design Settings](https://github.com/westcoastdigital/WP-Admin-Advanced-Search/blob/main/assets/image/screenshot-design-settings.png)
 
 ## Frequently Asked Questions
 
