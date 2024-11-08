@@ -1,0 +1,49 @@
+.settings_page_admin_search_settings h2 {
+ margin-bottom: 0;
+ font-weight: 400;
+ font-size: 15px;
+}
+
+.settings_page_admin_search_settings .form-table {
+ margin: 0;
+}
+
+.settings_page_admin_search_settings .form-table th {
+ display: none;
+}
+
+.settings_page_admin_search_settings .form-table td {
+ padding: 0;
+}
+
+.settings_page_admin_search_settings .field-group {
+ border-width: 2px;
+ border-style: groove;
+ border-color: threedface;
+ border-image: initial;
+ border-radius: 4px;
+ padding: 5px 10px;
+ margin: 20px 0;
+ background: white;
+}
+
+.settings_page_admin_search_settings .field-group legend {
+ font-size: 15px;
+ font-weight: bold;
+}
+
+.settings_page_admin_search_settings #post-types-settings ul li,
+.settings_page_admin_search_settings #design-settings ul li {
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    line-height: 1.4;
+}
+.settings_page_admin_search_settings #design-settings ul label,
+.settings_page_admin_search_settings #post-types-settings ul label {
+    line-height: 1.4;
+    margin: .35em 0 .5em;
+    font-size: 14px;
+}
+.settings_page_admin_search_settings .nav-tab:focus, .settings_page_admin_search_settings .nav-tab:hover {
+    box-shadow: none;
+}
