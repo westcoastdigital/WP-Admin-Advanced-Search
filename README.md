@@ -37,7 +37,7 @@ In there you will have up to 3 tabs
 
 * [ACF Settings](#acf-settings) (only will be there if ACF is active)
 * [Post Types](#post-types)
-* [Design Settings](#custom-implementation)
+* [Design Settings](#design-settings)
 
 ### ACF Settings
 
