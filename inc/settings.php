@@ -272,6 +272,16 @@ if (!class_exists('JM_WP_ADMIN_SEARCH_SETTINGS')) {
 
             register_setting(
                 'acf_search_options_group',
+                'admin_search_location',
+                [
+                    'type' => 'array',
+                    'sanitize_callback' => [$this, 'admin_search_location_sanitize'],
+                    'default' => [3]
+                ]
+            );
+
+            register_setting(
+                'acf_search_options_group',
                 'admin_search_qty',
                 [
                     'type' => 'array',
