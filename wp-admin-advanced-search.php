@@ -3,7 +3,7 @@
 Plugin Name:  WP Admin Advanced Search
 Plugin URI:   https://github.com/westcoastdigital/WP-Admin-Advanced-Search
 Description:  Add support to easily search for any media, product, post or page in the backend
-Version:      1.0.0
+Version:      0.9.0
 Author:       Jon Mather
 Author URI:   https://jonmather.au
 Text Domain:  simpliweb
@@ -33,7 +33,7 @@ require_once plugin_dir_path(__FILE__) . 'github-updater.php';
 if (class_exists('SimpliWeb_GitHub_Updater')) {
     $updater = new SimpliWeb_GitHub_Updater(__FILE__);
     $updater->set_username('westcoastdigital'); // Update Username
-    $updater->set_repository('SWP-Admin-Advanced-Search'); // Update plugin slug
+    $updater->set_repository('WP-Admin-Advanced-Search'); // Update plugin slug
     
     if (defined('GITHUB_ACCESS_TOKEN')) {
       $updater->authorize(SW_GITHUB_ACCESS_TOKEN);
