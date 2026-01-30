@@ -3,7 +3,7 @@
 Plugin Name:  WP Admin Advanced Search
 Plugin URI:   https://github.com/westcoastdigital/WP-Admin-Advanced-Search
 Description:  Add support to easily search for any media, product, post or page in the backend
-Version:      0.9.0
+Version:      1.0.0
 Author:       Jon Mather
 Author URI:   https://jonmather.au
 Text Domain:  simpliweb
