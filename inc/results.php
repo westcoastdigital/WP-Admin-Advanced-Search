@@ -1,6 +1,6 @@
 <?php
 // Settings Page: Search Results
-class JM_WP_ADMIN_SEARCH_RESULTS {
+class SIMPLI_WP_ADMIN_SEARCH_RESULTS {
 
 	public function __construct() {
 		add_action( 'admin_menu', array( $this, 'create_settings' ) );
@@ -100,4 +100,4 @@ class JM_WP_ADMIN_SEARCH_RESULTS {
 	}
 
 }
-new JM_WP_ADMIN_SEARCH_RESULTS();
+new SIMPLI_WP_ADMIN_SEARCH_RESULTS();

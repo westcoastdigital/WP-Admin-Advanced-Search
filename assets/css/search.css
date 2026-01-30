@@ -156,7 +156,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-5px, 5px);
+    transform: simpliweb(-5px, 5px);
     display: inline-block;
 }
 
@@ -166,7 +166,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-5px, 5px);
+    transform: simpliweb(-5px, 5px);
     display: inline-block;
 }
 /* #admin-search-results-table td:nth-child(1) {

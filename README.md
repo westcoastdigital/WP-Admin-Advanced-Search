@@ -87,3 +87,56 @@ No, this works with all registered post types, you can choose which ones to igno
 No, this only searches ACF fields that are enabled in the [Settings](#settings) page and WooCommerce Product SKUs
 
 </details>
+
+<details>
+<summary>Is there a filter to disable post types?</summary>
+
+Yes, by default excluded post types are:<br>
+```
+$excluded_post_types = [
+    'acf-field',
+    'acf-field-group',
+    'oembed_cache',
+    'search-filter-widget',
+    'wp_global_styles'
+];
+```
+<br><br>
+There is a ```simpli_wp_admin_search_excluded_post_types``` filter example:<br>
+```
+add_filter( 'simpli_wp_admin_search_excluded_post_types', function ( $post_types ) {
+    $post_types[] = 'my_custom_post_type';
+    $post_types[] = 'another_one';
+    return $post_types;
+});
+```
+
+</details>
+
+## Changelog
+
+### 1.0.0
+- Update to support GitHub plugin updater in the WP dashboard
+
+### 0.1.0 (Initial Release)
+- Initial Release
+
+## Support
+
+For support, feature requests, or bug reports:
+
+- Author: Jon Mather
+- Website: [https://jonmather.au](https://jonmather.au)
+- GitHub: [https://github.com/westcoastdigital/Simpli-WP-Optimser](https://github.com/westcoastdigital/Simpli-WP-Optimser)
+
+## Credits
+
+Developed by Jon Mather at SimpliWeb
+
+## License
+
+GPL v2 or later - [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.

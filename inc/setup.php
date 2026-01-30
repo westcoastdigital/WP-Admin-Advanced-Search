@@ -4,8 +4,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-if (!class_exists('JM_WP_ADMIN_SEARCH_SETUP')) {
-    class JM_WP_ADMIN_SEARCH_SETUP
+if (!class_exists('SIMPLI_WP_ADMIN_SEARCH_SETUP')) {
+    class SIMPLI_WP_ADMIN_SEARCH_SETUP
     {
         public function __construct()
         {
@@ -34,7 +34,7 @@ if (!class_exists('JM_WP_ADMIN_SEARCH_SETUP')) {
                                id="menu-search-input"
                                placeholder="Search..."
                                autocomplete="off">
-                               <img class="loading" src="' . JM_WP_ADMIN_SEARCH_AUTH_URL . '/assets/image/loading.gif" />
+                               <img class="loading" src="' . SIMPLI_WP_ADMIN_SEARCH_AUTH_URL . '/assets/image/loading.gif" />
                         <div id="search-results" class="search-results"></div>
                     </form>
                 </div>'
@@ -65,7 +65,7 @@ if (!class_exists('JM_WP_ADMIN_SEARCH_SETUP')) {
                                id="admin-bar-search-input"
                                placeholder="Search..."
                                autocomplete="off">
-                               <img class="loading" src="' . JM_WP_ADMIN_SEARCH_AUTH_URL . '/assets/image/loading.gif" />
+                               <img class="loading" src="' . SIMPLI_WP_ADMIN_SEARCH_AUTH_URL . '/assets/image/loading.gif" />
                         <div id="admin-bar-search-results" class="search-results"></div>
                     </form>'
                 ),
@@ -227,22 +227,22 @@ if (!class_exists('JM_WP_ADMIN_SEARCH_SETUP')) {
         {
             wp_enqueue_style(
                 'jm-admin-search',
-                JM_WP_ADMIN_SEARCH_AUTH_URL . 'assets/css/search.css',
+                SIMPLI_WP_ADMIN_SEARCH_AUTH_URL . 'assets/css/search.css',
                 [],
-                filemtime(JM_WP_ADMIN_SEARCH_AUTH_PATH . 'assets/css/search.css')
+                filemtime(SIMPLI_WP_ADMIN_SEARCH_AUTH_PATH . 'assets/css/search.css')
             );
             wp_enqueue_style(
                 'jm-admin-search-setup',
-                JM_WP_ADMIN_SEARCH_AUTH_URL . 'assets/css/settings.css',
+                SIMPLI_WP_ADMIN_SEARCH_AUTH_URL . 'assets/css/settings.css',
                 [],
-                filemtime(JM_WP_ADMIN_SEARCH_AUTH_PATH . 'assets/css/settings.css')
+                filemtime(SIMPLI_WP_ADMIN_SEARCH_AUTH_PATH . 'assets/css/settings.css')
             );
 
             wp_enqueue_script(
                 'jm-admin-search',
-                JM_WP_ADMIN_SEARCH_AUTH_URL . 'assets/js/search.js',
+                SIMPLI_WP_ADMIN_SEARCH_AUTH_URL . 'assets/js/search.js',
                 ['jquery'],
-                filemtime(JM_WP_ADMIN_SEARCH_AUTH_PATH . 'assets/js/search.js'),
+                filemtime(SIMPLI_WP_ADMIN_SEARCH_AUTH_PATH . 'assets/js/search.js'),
                 true
             );
 
@@ -263,5 +263,5 @@ if (!class_exists('JM_WP_ADMIN_SEARCH_SETUP')) {
     }
 
     // Instantiate the class
-    new JM_WP_ADMIN_SEARCH_SETUP;
+    new SIMPLI_WP_ADMIN_SEARCH_SETUP;
 }

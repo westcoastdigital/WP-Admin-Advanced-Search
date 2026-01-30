@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name:  WP Admin Advanced Search
-Plugin URI:   https://jonmather.au
+Plugin URI:   https://github.com/westcoastdigital/WP-Admin-Advanced-Search
 Description:  Add support to easily search for any media, product, post or page in the backend
-Version:      0.1.0
+Version:      1.0.0
 Author:       Jon Mather
 Author URI:   https://jonmather.au
-Text Domain:  translate
-Domain Path:  languages
+Text Domain:  simpliweb
+Domain Path:  /languages
 */
 
 // Exit if accessed directly
@@ -16,18 +16,36 @@ if (!defined('ABSPATH')) {
 }
 
 //define plugin version
-define('JM_WP_ADMIN_SEARCH_VERSION', '0.1.0');
+define('SIMPLI_WP_ADMIN_SEARCH_VERSION', '1.0.0');
 //plugin file
-define('JM_WP_ADMIN_SEARCH_AUTH_FILE', __FILE__);
+define('SIMPLI_WP_ADMIN_SEARCH_AUTH_FILE', __FILE__);
 //plugin folder path
-define('JM_WP_ADMIN_SEARCH_AUTH_PATH', plugin_dir_path(__FILE__));
+define('SIMPLI_WP_ADMIN_SEARCH_AUTH_PATH', plugin_dir_path(__FILE__));
 //plugin folder url
-define('JM_WP_ADMIN_SEARCH_AUTH_URL', plugin_dir_url(__FILE__));
+define('SIMPLI_WP_ADMIN_SEARCH_AUTH_URL', plugin_dir_url(__FILE__));
+
+// Include the updater class
+require_once plugin_dir_path(__FILE__) . 'github-updater.php';
+
+// For private repos, uncomment and add your token:
+// define('SW_GITHUB_ACCESS_TOKEN', 'your_token_here');
+
+if (class_exists('SimpliWeb_GitHub_Updater')) {
+    $updater = new SimpliWeb_GitHub_Updater(__FILE__);
+    $updater->set_username('westcoastdigital'); // Update Username
+    $updater->set_repository('SWP-Admin-Advanced-Search'); // Update plugin slug
+    
+    if (defined('GITHUB_ACCESS_TOKEN')) {
+      $updater->authorize(SW_GITHUB_ACCESS_TOKEN);
+    }
+    
+    $updater->initialize();
+}
 
 // Include files
-require_once JM_WP_ADMIN_SEARCH_AUTH_PATH . 'inc/setup.php';
-require_once JM_WP_ADMIN_SEARCH_AUTH_PATH . 'inc/settings.php';
-require_once JM_WP_ADMIN_SEARCH_AUTH_PATH . 'inc/results.php';
+require_once SIMPLI_WP_ADMIN_SEARCH_AUTH_PATH . 'inc/setup.php';
+require_once SIMPLI_WP_ADMIN_SEARCH_AUTH_PATH . 'inc/settings.php';
+require_once SIMPLI_WP_ADMIN_SEARCH_AUTH_PATH . 'inc/results.php';
 
 /*
 * Check if ACF is activated
@@ -55,4 +73,11 @@ $excluded_post_types = [
     'search-filter-widget',
     'wp_global_styles'
 ];
-define('JM_WP_ADMIN_SEARCH_EXCL_POST_TYPES', $excluded_post_types);
+
+// Allow extension via filter
+$excluded_post_types = apply_filters(
+    'simpli_wp_admin_search_excluded_post_types',
+    $excluded_post_types
+);
+
+define('SIMPLI_WP_ADMIN_SEARCH_EXCL_POST_TYPES', $excluded_post_types);

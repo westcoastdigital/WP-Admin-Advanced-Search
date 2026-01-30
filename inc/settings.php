@@ -4,15 +4,15 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-if (!class_exists('JM_WP_ADMIN_SEARCH_SETTINGS')) {
-    class JM_WP_ADMIN_SEARCH_SETTINGS {
+if (!class_exists('SIMPLI_WP_ADMIN_SEARCH_SETTINGS')) {
+    class SIMPLI_WP_ADMIN_SEARCH_SETTINGS {
 
         public function __construct() {
             // Register the settings page and the settings fields
             add_action('admin_menu', [$this, 'register_search_settings_page']);
             add_action('admin_init', [$this, 'admin_search_register_settings']);
              // Add filter for plugin action links
-             add_filter('plugin_action_links_' . plugin_basename(JM_WP_ADMIN_SEARCH_AUTH_FILE), [$this, 'add_settings_link']);
+             add_filter('plugin_action_links_' . plugin_basename(SIMPLI_WP_ADMIN_SEARCH_AUTH_FILE), [$this, 'add_settings_link']);
             // Register activation hook to set default values
             register_activation_hook(__FILE__, [$this, 'set_default_excluded_post_types']);
         }
@@ -29,7 +29,7 @@ if (!class_exists('JM_WP_ADMIN_SEARCH_SETTINGS')) {
             // Check if the option already exists
             if (!get_option('excluded_post_types')) {
                 // Set the default excluded post types if the option doesn't exist
-                update_option('excluded_post_types', JM_WP_ADMIN_SEARCH_EXCL_POST_TYPES);
+                update_option('excluded_post_types', SIMPLI_WP_ADMIN_SEARCH_EXCL_POST_TYPES);
             }
         }
 
@@ -432,6 +432,6 @@ if (!class_exists('JM_WP_ADMIN_SEARCH_SETTINGS')) {
     }
 
     // Instantiate the class
-    new JM_WP_ADMIN_SEARCH_SETTINGS;
+    new SIMPLI_WP_ADMIN_SEARCH_SETTINGS;
 }
 ?>
